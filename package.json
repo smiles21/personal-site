@@ -51,6 +51,7 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "clean": "rimraf .cache public",
     "deploy": "npm run clean && gatsby build && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
