@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Random Musings]]></title><description><![CDATA[A blog about completely random things]]></description><link>https://scottm.me</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 25 Sep 2019 03:41:34 GMT</lastBuildDate><item><title><![CDATA[[1]: Data Creation and Context]]></title><description><![CDATA[A colleague of mine was giving a talk recently to our department about the
+importance of data and one line stuck out to me as being…]]></description><link>https://scottm.me/data-creation-and-context/</link><guid isPermaLink="false">https://scottm.me/data-creation-and-context/</guid><pubDate>Wed, 26 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A colleague of mine was giving a talk recently to our department about the
+importance of data and one line stuck out to me as being interesting.  His
+statement basically boiled down to the idea that data does not inherently exist
+in nature, but must be created at some time, otherwise it is lost forever.  I
+found this observation rather interesting, and wanted to travel a bit further
+down the rabbit hole into the concept of data and its usefulness.&lt;/p&gt;
+&lt;p&gt;Following from data needing to be created, we can see something rather
+interesting: data is inherently human-made.  In order to create data, some
+observation needs to be made about an idea or entity, and a number or label
+assigned to it.  These observations may be a pressure reading from a meter, the
+temperature outside, or the color of the spots on a bee.  Let’s examine both
+qualifiable data points, such as the bee’s spots, and quantifiable data points,
+such as the pressure and temperature.&lt;/p&gt;
+&lt;p&gt;The qualifiable data points can be more easily shown to be human-made since the
+label of the data point itself is defined somehow by humans.  In our example of
+the color of spots on a bee, the color of the spots exists in the natural world,
+but the color yellow is created by a human and has become generally accepted to
+mean the wavelengths of light reaching our eyes from the bee.  Thus we can see
+that qualifiable data is human-made.&lt;/p&gt;
+&lt;p&gt;Quantifiable data points use a similar argument, but we have to look at them
+more closely. At least two parts are required to create a quantifiable data
+point: a number and a unit of measure. While it is still a debate of whether
+numbers themselves are natural or created by humans, we can definitively say
+that a unit of measure is human-made.  To say that it is 37 degrees Celsius
+outside and understand what that means, we first need to define what a degree
+Celsius is.  If we leave off the unit of measure, we are merely left with a
+number by itself.&lt;/p&gt;
+&lt;p&gt;Back out of the philosophical world, where does just a number get us, though? In
+the real world of utilizing this data, not very far. If given the number 37 and
+asked if I need to wear long pants or shorts when I go outside, I would have no
+clue how to answer.  While a ridiculous idea on Earth, suppose it was 37 Kelvin
+outside.  The decision of pants or shorts wouldn’t really matter much at all in
+such a situation.  Thus, we can’t remove the unit of measure from the data point
+and still have a useful data point.&lt;/p&gt;
+&lt;p&gt;Continuing further in the real world, let’s look at the usefulness of the data
+we create.  By itself, data doesn’t really serve much purpose.  We must combine
+it with other context for it to really give us any understanding of what we are
+observing.  Telling someone who has lived their whole life in a
+climate-controlled room at 22 degree Celsius that is 37 degrees Celsius outside
+will not give them any clarity to how warm it actually is outside.  They would
+need more context to truly understand what that means; be it direct, such as
+their room being heated to that temperature, or indirect, where they perhaps
+know what a five-degree Celsius change feels like and can extrapolate the
+15-degree difference. &lt;/p&gt;
+&lt;p&gt;Especially in the modern world, data has become more and more widespread and
+precious.  While we should respect and study how data has shaped our lives and
+aided our decision-making processes, we should still view data as a human-made
+construct which must be captured when possible, else it is gone forever.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[0]: An Interesting Approach to An Urn Problem]]></title><description><![CDATA[I found myself watching a lecture by Edsger Dijkstra a few days back and saw an
+interesting problem which I posed to some colleagues…]]></description><link>https://scottm.me/an-interesting-approach-to-an-urn-problem/</link><guid isPermaLink="false">https://scottm.me/an-interesting-approach-to-an-urn-problem/</guid><pubDate>Sun, 28 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I found myself watching a lecture by Edsger Dijkstra a few days back and saw an
+interesting problem which I posed to some colleagues:&lt;/p&gt;
+&lt;p&gt;Suppose an urn with one or more pebbles, each pebble being black or white, and
+the following simple game.  Continue making moves as long as there are two or
+more pebbles in the urn, where a move is defined as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Take two pebbles out of the urn&lt;/li&gt;
+&lt;li&gt;If their colors are the same, put a black pebble in the urn.  If their colors
+are different, put a white pebble in the urn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Given the above, what can be said about the color of the final pebble in the
+urn?&lt;/p&gt;
+&lt;p&gt;As I had tried myself, all of my colleagues approached the problem using a case
+analysis of the last few pebbles.  This method quickly gets out of hand
+determining how the urn could even have reached a combination of just three
+pebbles.&lt;/p&gt;
+&lt;p&gt;After a small hint, I was able to see the argument.  I liked the beauty of the
+answer and it opened my eyes to a different way to approach problems.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Answer:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Completion:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The game will complete with only one pebble in the urn, since in every move we
+remove two pebbles and place one in.  This move results in one less pebble being
+in the urn at the end of the turn.  If we have only one pebble, we are done, and
+if we have more than one pebble, this process will eventually leave only one
+pebble in the urn.&lt;/p&gt;
+&lt;!-- We shall show this while ignoring the color of the pebbles in the urn.
+
+Let $K = B + W$, where $K$ is the initial number of pebbles, $B$ is the initial number of
+black pebbles, and $W$ is the initial number of white pebbles.  At the
+beginning of the game, let $k := K$.  We are guaranteed that $k /geq 1$ by the
+precondition of the game.  As a move goes on, we remove two pebbles
+($k := k - 2$) and add back one pebble ($k := k + 1$), with a net result being
+to remove one pebble ($k := k - 1$) --&gt;
+&lt;p&gt;&lt;em&gt;Correctness:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To see which color will remain at the end of the game, we shall examine the
+change in number of each color.  Suppose at the beginning of an arbitrary turn,
+there are $b$ black pebbles and $w$ white pebbles in the urn.  Examining the
+possible cases of the moves where $B$ signifies a black pebble pulled from the
+urn and $W$ a white pebble pulled from the urn, we see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Assuming $b \geq 1 \wedge w \geq 1$, ${BW \rightarrow W} \Rightarrow b := b - 1$&lt;/li&gt;
+&lt;li&gt;Assuming $b \geq 2$, ${BB \rightarrow B} \Rightarrow b := b - 1$&lt;/li&gt;
+&lt;li&gt;Assuming $w \geq 2$,  ${WW \rightarrow B} \Rightarrow b := b + 1 ; w := w - 2$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If we observe the parity of $w$, we notice that it will never change, since $w$
+only ever changes by 2.  Taking this a step further, we can say that the parity
+of $w$ will never change as the game is played.&lt;/p&gt;
+&lt;p&gt;Given that we play this game until we only have one pebble, we can safely say
+that the last pebble’s color can be determined by the number of white
+pebbles in the urn at the beginning of the game.  If that number is even, the
+last pebble will be black, and if that number is odd, the last pebble will be
+white.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;End of Answer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Now I very much like this answer for a number of reason.  Firstly, I was
+pleased when I saw it first because of the interesting way it seems to throw
+out how my colleagues and I initially tried to solve it.  By ignoring how we
+got to any specific instance in the chain of moves, we can eventually see that
+the chain of moves hardly ever mattered.  The only thing that actually mattered
+was the initial number of white pebbles.&lt;/p&gt;
+&lt;p&gt;Secondly, I enjoy this answer because it is extremely easy to explain to a
+layman.  Anyone with a very basic background in math or who can think critically
+can wrap their heads around such an easy game, and likewise a answer that
+revolves around if a number is even.&lt;/p&gt;</content:encoded></item></channel></rss>
