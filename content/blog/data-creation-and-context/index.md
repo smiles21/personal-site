@@ -1,6 +1,6 @@
 ---
 title: "[1]: Data Creation and Context"
-date: "2019-06-26"
+date: "2019-06-27"
 template: "post"
 draft: false
 slug: "/posts/on-the-need-for-context-in-data/"
