@@ -9,12 +9,15 @@ const Footer = () => {
       site {
         siteMetadata {
           social {
+            email
             github
           }
         }
       }
     }
-  `)
+  `);
+
+  const { social } = data.site.siteMetadata
 
   return (
     <footer
@@ -24,12 +27,21 @@ const Footer = () => {
       }}
     >
       <a
-        href={`https://github.com/${data.site.siteMetadata.social.github}`}
+        href={`https://github.com/${social.github}`}
         target="_blank"
         rel="noopener noreferrer"
       >
         github
       </a>
+      {' '}
+      &bull;{' '}
+      <a
+        href={`mailto:${social.email}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        email
+      </a>{' '}
     </footer>
   );
 }

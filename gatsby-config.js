@@ -5,6 +5,7 @@ module.exports = {
     description: `A blog about completely random things`,
     siteUrl: `https://scottm.me/`,
     social: {
+      email: `scott@scottm.me`,
       github: `smiles21`,
     },
   },
